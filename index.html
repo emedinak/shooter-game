@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Shooter Game</title>
+  <link type="text/css" rel="stylesheet" href="game.css">
+  <script src="Game.js" type="text/javascript"></script>
+  <script src="Entity.js" type="text/javascript"></script>
+  <script src="Character.js" type="text/javascript"></script>
+  <script src="Player.js" type="text/javascript"></script>
+  <script src="Opponent.js" type="text/javascript"></script>
+  <script src="Boss.js" type="text/javascript"></script>
+  <script src="Shot.js" type="text/javascript"></script>
+  <script src="main.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <ul>
+    <li id="scoreli">Score: 0</li>
+    <li id="livesli">Lives: 3</li>
+  </ul>
+  <button id="pause" class="gamebutton" onclick="this.blur();">Pause (Esc / Q)</button>
+  <button id="reset" class="gamebutton" onclick="this.blur();">NEW GAME (N)</button>
+  <select id="background" class="gamebutton" title="Background" onchange="this.blur();">
+    <option value="classic">Classic white</option>
+    <option value="ice">Ice</option>
+    <option value="mint">Mint</option>
+    <option value="peach">Peach</option>
+    <option value="lavender">Lavender</option>
+  </select>
+</body>
+
+</html>

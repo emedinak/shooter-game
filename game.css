@@ -1,0 +1,84 @@
+html {
+  overflow: hidden;
+}
+
+/* Backgrounds for the selector. All of them are light: the sprites are shades of grey */
+html[data-background="mint"] {
+  background: linear-gradient(180deg, #e6f8ee 0%, #cdeedd 55%, #b4e2cb 100%) fixed;
+}
+
+html[data-background="peach"] {
+  background: linear-gradient(180deg, #fff1e6 0%, #fddcc4 55%, #f8c9b0 100%) fixed;
+}
+
+html[data-background="lavender"] {
+  background: linear-gradient(180deg, #f1ebff 0%, #ddd2fa 55%, #cbbdf0 100%) fixed;
+}
+
+/* Light on purpose: every sprite is a shade of grey and has to stand out */
+html[data-background="ice"] {
+  background: linear-gradient(180deg, #e3f0ff 0%, #c9defa 55%, #b9c9f2 100%) fixed;
+}
+
+.Opponent, .Boss {
+	animation: rotation 3s infinite linear;
+	-webkit-animation: rotation 3s infinite linear;
+}
+
+.paused .Opponent, .Boss {
+	animation: none;
+	-webkit-animation: none;
+}
+
+@-webkit-keyframes rotation {
+	from {
+		transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+		-webkit-transform: rotate(359deg);
+	}
+}
+
+.gamebutton {
+	border: none;
+	background: #ddd;
+	color: #333;
+	padding: 10px 20px;
+	outline: none;
+	font-family: monospace;
+	cursor: pointer;
+}
+
+/* Score and lives, always visible in the top-right corner */
+body > ul {
+	position: fixed;
+	top: 10px;
+	right: 20px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: right;
+	font-family: monospace;
+	font-size: 20px;
+	color: #333;
+	pointer-events: none;
+	user-select: none;
+	z-index: 10;
+}
+
+body > ul li + li {
+	margin-top: 4px;
+}
+
+/* Compact background selector, with the arrow close to the text */
+#background {
+	appearance: none;
+	-webkit-appearance: none;
+	padding: 10px 22px 10px 10px; /* same vertical padding as the buttons, so it has the same height */
+	font-size: 13.333px; /* same as the buttons (browser default for buttons) */
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0l4 5 4-5z' fill='%23333'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 7px center;
+}
